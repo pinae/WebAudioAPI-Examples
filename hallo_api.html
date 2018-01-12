@@ -1,0 +1,34 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h1>Hallo Web Audio API</h1>
+    Dieses einfache JavaScript Programm erzeugt einen kurzen Ton mit der Web Audo API.
+    <script>
+      var context = new (window.AudioContext || window.webkitAudioContext)();
+      
+      //Knoten erzeugen
+      var oscillator = context.createOscillator();
+      var gain = context.createGain();
+      
+      //Knoten verbinden
+      oscillator.connect(gain);
+      gain.connect(context.destination);
+
+      //Knoten konfigurieren
+      oscillator.frequency.value = 240;
+      oscillator.type = "sine";
+
+      gain.gain.value = 1.0;
+
+      //Tonerzeugung starten
+      oscillator.start();
+      oscillator.stop(context.currentTime+1);
+
+      oscillator.start(context.currentTime+2);
+      oscillator.stop(context.currentTime+3);
+
+    </script>
+  </body>
+</html>

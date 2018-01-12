@@ -1,0 +1,101 @@
+<html>
+    <meta charset="utf-8">
+    <style type="text/css">
+      
+      .title{
+        border:2px solid #999;
+        padding:10px;
+        margin:20px 20px 20px 20px 
+      }
+      .titlebox{
+        float:left;
+        padding:0 5px;
+        margin:-20px 0 0 5px;
+        background:#fff;
+      }
+      </style>
+  <head>
+    <script src="NexusUI.js"></script>
+    <script src="ct_drums.js"></script>
+  </head>
+  <body>
+    <h1>c't Drums</h1>
+    <div class="title" style="width:500">
+        <div class="titlebox">Sequencer</div>
+          <div style="display:flex;flex-direction:column;justify-content: center;margin:0px 40px 0px 40px"">
+          <div id="play" style='clear: both'></div>
+          <div id="sequencer"></div>
+          <div>Geschwindigkeit</div>
+          <div id="slider"></div>
+        </div>
+    </div>
+    <div class="title" style="width:500">
+        <div class="titlebox">Drums</div>
+        <div style="display:flex;flex-direction:row;justify-content: center;text-align: center;">
+            <div style="margin:0px 20px 0px 20px">
+              <div id="button0"></div>
+              <div >closed</div>
+            </div>
+            <div style="margin:0px 20px 0px 20px">
+              <div id="button1"></div>
+              <div>open</div>
+            </div>
+            <div style="margin:0px 20px 0px 20px">
+              <div id="button2"></div>
+              <div>snare</div>
+            </div>
+            <div style="margin:0px 20px 0px 20px">
+              <div id="button3"></div>
+              <div>bass</div>
+            </div>
+        </div>
+    </div>
+    <div class="title" style="width:500">
+        <div class="titlebox">BiquadFilter</div>
+        <div style="display:flex;flex-direction:row;justify-content: center;">
+          <div class="title" style="width:55">
+              <div class="titlebox">HighFr</div>
+              <div>
+                  22<div id="slider_hf_khz"	style="width:20px;height:100px;"></div>4.7 kHz
+              </div>
+              <div>
+                  50<div id="slider_hf_db"	style="width:20px;height:100px;"></div>-50 db
+              </div>
+          </div>
+          <div class="title" style="width:55">
+              <div class="titlebox">LowFr</div>
+              <div>
+                  220<div id="slider_lf_khz"	style="width:20px;height:100px;"></div>35 Hz
+              </div>
+              <div>
+                  50<div id="slider_lf_db"	style="width:20px;height:100px;"></div>-50 db
+              </div>
+          </div>
+        <div class="title" style="width:55">
+            <div class="titlebox">HighPa</div>
+            <div>
+                5.9<div id="slider_hp_khz"	style="width:20px;height:100px;"></div>0.8 kHz
+            </div>
+            <div>
+                12<div id="slider_hp_q"	style="width:20px;height:100px;"></div>0.7 q
+            </div>
+        </div>
+        <div class="title" style="width:55">
+            <div class="titlebox">lowPas</div>
+            <div>
+                1600<div id="slider_lp_khz"	style="width:20px;height:100px;"></div>80 Hz
+            </div>
+            <div>
+                12<div id="slider_lp_q"	style="width:20px;height:100px;"></div>0.7 db
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = function () { 
+        init();
+      }
+    </script>
+  </body>
+</html>

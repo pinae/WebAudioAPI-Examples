@@ -1,0 +1,79 @@
+<html>
+    <meta charset="utf-8">
+    <style type="text/css">
+      
+      .title{
+        border:2px solid #999;
+        padding:10px;
+        margin:20px 20px 20px 20px 
+      }
+      .titlebox{
+        float:left;
+        padding:0 5px;
+        margin:-20px 0 0 8px;
+        background:#fff;
+      }
+      .dial{
+        width:80px;
+      }
+      .dialnumber{
+        width:80px;
+      }
+      </style>
+  <head>
+    <script src="NexusUI.js"></script>
+    <script src="ct_synth.js"></script>
+  </head>
+  <body>
+    <h1>c't Synthesizer</h1>
+    <div style="display:flex;flex-direction:row">
+      <div>
+        <div class="title" style="width:100">
+            <div class="titlebox">Wellenform</div>
+            <div id="select"></div>
+        </div>
+        <div class="title" style="width:100;">
+            <div class="titlebox">Lautstärke</div>
+            <div id="dial" class="dial"></div>
+            <div id="number" style="width:100;" ></div>
+        </div>
+      </div>
+      <div class="title" style="width:320">
+          <div class="titlebox">Oszilloskop</div>
+          <div id="oscilloscope"></div>
+      </div>
+      <div class="title" style="width:320">
+          <div class="titlebox">Hüllkurve</div>
+          <div id="envelope"></div>
+          <div style="display:flex;flex-direction:row">
+            <div>
+              <div id="attack" style="width:80;"></div>
+              <div id="attack_number" style="width:80;"></div>
+              <div>Attack</div>
+            </div>
+            <div>
+              <div id="decay" style="width:80;"></div>
+              <div id="decay_number" style="width:80;"></div>
+              <div>Decay</div>
+            </div>
+            <div>
+              <div id="sustain" style="width:80;"></div>
+              <div id="sustain_number" style="width:80;"></div>
+              <div>Sustain</div>
+            </div>
+            <div>
+              <div id="release" style="width:80;"></div>
+              <div id="release_number" style="width:80;"></div>
+              <dis>Release</dis>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="piano" style="width:900;"></div>
+    <script>
+      window.onload = function () { 
+          init();
+    }
+    </script>
+  </body>
+</html>
