@@ -17,18 +17,14 @@
       gain.connect(context.destination);
 
       //Knoten konfigurieren
-      oscillator.frequency.value = 240;
+      var now = context.currentTime;
+      oscillator.frequency.setValueAtTime(240, now);
       oscillator.type = "sine";
-
-      gain.gain.value = 1.0;
+      gain.gain.setValueAtTime(1.0, now);
 
       //Tonerzeugung starten
       oscillator.start();
-      oscillator.stop(context.currentTime+1);
-
-      oscillator.start(context.currentTime+2);
-      oscillator.stop(context.currentTime+3);
-
+      oscillator.stop(now+5);
     </script>
   </body>
 </html>
